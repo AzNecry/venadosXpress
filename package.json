@@ -1,6 +1,7 @@
 {
   "name": "venadosxpress",
   "version": "0.1.0",
+  "homepage": "http://AzNecry.github.io/login",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -19,7 +20,6 @@
     "react-toastify": "^9.1.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://AzNecry.github.io/venadosXpress",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
