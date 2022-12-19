@@ -19,8 +19,11 @@
     "react-toastify": "^9.1.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "http://AzNecry.github.io/venadosXpress",
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start:backend": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "node-sass": "^7.0.3",
     "sass-loader": "^13.2.0"
   }
