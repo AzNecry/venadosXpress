@@ -47,6 +47,7 @@ const Orders = () => {
                     <th>ID de pedido</th>
                     <th>Precio de pedido</th>
                     <th>Estado de pedido</th>
+                    <th>No. de Guia</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -57,13 +58,12 @@ const Orders = () => {
                       orderTime,
                       orderAmount,
                       orderStatus,
+                      no_guia,
                     } = order;
                     return (
                       <tr key={id} onClick={() => handleClick(id)}>
                         <td>{index + 1}</td>
-                        <td>
-                          {orderDate} at {orderTime}
-                        </td>
+                        <td>{orderDate}</td>
                         <td>{id}</td>
                         <td>
                           {'$'}
@@ -80,6 +80,7 @@ const Orders = () => {
                             {orderStatus}
                           </p>
                         </td>
+                        <td>{no_guia}</td>
                       </tr>
                     );
                   })}

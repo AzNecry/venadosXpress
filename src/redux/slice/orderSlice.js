@@ -32,3 +32,20 @@ export const selectOrderHistory = (state) => state.orders.orderHistory;
 export const selectTotalOrderAmount = (state) => state.orders.totalOrderAmount;
 
 export default orderSlice.reducer;
+
+// const requestOptions = {
+//   method: 'POST',
+//   headers: { 'Content-Type': 'application/json' },
+//   body: JSON.stringify({
+
+//   }),
+// };
+// fetch(
+//   'https://us-central1-api-firebase-6b9e5.cloudfunctions.net/app/api/banco',
+//   requestOptions
+// )
+//   .then((response) => response.json())
+//   .then((data) => {})
+//   .catch((err) => {
+//     //console.log(err.message);
+//   });

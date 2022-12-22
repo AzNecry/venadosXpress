@@ -19,8 +19,10 @@ import {
   query,
   setDoc,
   Timestamp,
+  updateDoc,
   where,
 } from 'firebase/firestore';
+import { deleteObject, ref } from 'firebase/storage';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -43,16 +45,23 @@ const Register = () => {
     fecha_corte: '',
   };
 
-  const registerUser = (e) => {
+  const registerUser = async (e) => {
     e.preventDefault();
+
     if (password !== cPassword) {
       toast.error('Las contraseñas no coinciden');
     }
     setIsLoading(true);
+    const numeroRef = doc(db, 'contador', 'usuarios');
+    var num = await getDoc(numeroRef);
+    await updateDoc(numeroRef, {
+      numero: Number(num.data().numero) + 1,
+    });
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         setIsLoading(false);
+
         const registro = doc(db, 'usuarios', email);
 
         setDoc(registro, {
@@ -62,23 +71,12 @@ const Register = () => {
           email: email,
           contrasena: password,
           estado_membresia: membresia,
-          id_usuario: '',
+          id_usuario: Number(num.data().numero),
           fecha_corte: Timestamp.now().toDate(),
         })
-          // setDoc((db, 'usuarios', email), {
-          //   nombre: nombre,
-          //   apellido1: apellido,
-          //   apellido2: apellido2,
-          //   email: email,
-          //   contrasena: password,
-          //   estado_membresia: membresia,
-          //   id_usuario: '',
-          //   fecha_corte: Timestamp.now().toDate(),
-          // })
           .then(() => {
             signOut(auth);
             toast.success('Registro exitoso...');
-            //window.open('https://google.com');
             navigate('/login');
           })
           .catch((error) => {
@@ -89,6 +87,27 @@ const Register = () => {
       .catch((error) => {
         toast.error(error.message);
         setIsLoading(false);
+      });
+    // Simple POST request with a JSON body using fetch
+    const requestOptions = {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        id: Number(num.data().numero),
+        nombre: nombre,
+        apellidoPaterno: apellido,
+        apellidoMaterno: apellido2,
+        correo: email,
+      }),
+    };
+    fetch('http://187.189.158.166:12188/api/v1/UsuarioMemb', requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        // Handle data
+      })
+      .catch((err) => {
+        console.log(err.message);
       });
   };
 

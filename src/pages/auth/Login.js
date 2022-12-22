@@ -67,16 +67,14 @@ const Login = () => {
 
     const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists()) {
-      console.log('Document data:', docSnap.data().estado_membresia);
-    } else {
-      // doc.data() will be undefined in this case
-      console.log('No such document!');
-    }
     if (!docSnap.data().estado_membresia) {
       toast.error('No tiene membresia');
       setIsLoading(false);
-      //window.open('https://google.com');
+      window.open(
+        `http://187.189.158.166:12188/membresias?id=${
+          docSnap.data().id_usuario
+        }`
+      );
       navigate('/login');
     } else {
       signInWithEmailAndPassword(auth, email, password)

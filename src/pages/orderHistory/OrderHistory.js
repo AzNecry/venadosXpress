@@ -47,6 +47,7 @@ const OrderHistory = () => {
                     <th>ID de pedido</th>
                     <th>Precio de pedido</th>
                     <th>Estado de pedido</th>
+                    <th>No. de Guia</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -57,6 +58,7 @@ const OrderHistory = () => {
                       orderTime,
                       orderAmount,
                       orderStatus,
+                      no_guia,
                     } = order;
                     return (
                       <tr key={id} onClick={() => handleClick(id)}>
@@ -80,6 +82,7 @@ const OrderHistory = () => {
                             {orderStatus}
                           </p>
                         </td>
+                        <td>{no_guia}</td>
                       </tr>
                     );
                   })}

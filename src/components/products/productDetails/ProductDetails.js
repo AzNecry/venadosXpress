@@ -77,7 +77,7 @@ const ProductDetails = () => {
                   <b>Clave</b> {product.id}
                 </p>
                 <p>
-                  <b>Marca</b> {product.brand}
+                  <b>Stock</b> {product.brand}
                 </p>
                 <p>
                   <b>Descripcion</b>
@@ -107,12 +107,22 @@ const ProductDetails = () => {
                     </>
                   )}
                 </div>
-                <button
-                  className="--btn --btn-danger"
-                  onClick={() => addToCart(product)}
-                >
-                  Agregar a carrito
-                </button>
+                {product.brand === 0 ? (
+                  <button
+                    className="--btn --btn-danger"
+                    onClick={() => addToCart(product)}
+                    disabled
+                  >
+                    SIN STOCK DISPONIBLE
+                  </button>
+                ) : (
+                  <button
+                    className="--btn --btn-danger"
+                    onClick={() => addToCart(product)}
+                  >
+                    Agregar a carrito
+                  </button>
+                )}
               </div>
             </div>
           </>

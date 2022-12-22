@@ -66,7 +66,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Nombre"
                 name="name"
-                calue={shippingAddress.name}
+                value={shippingAddress.name}
                 onChange={(e) => handleShipping(e)}
                 required
               />
@@ -76,7 +76,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Dirección 1"
                 name="line1"
-                calue={shippingAddress.line1}
+                value={shippingAddress.line1}
                 onChange={(e) => handleShipping(e)}
                 required
               />
@@ -86,7 +86,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Dirección 2"
                 name="line2"
-                calue={shippingAddress.line2}
+                value={shippingAddress.line2}
                 onChange={(e) => handleShipping(e)}
               />
 
@@ -95,7 +95,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Ciudad"
                 name="city"
-                calue={shippingAddress.city}
+                value={shippingAddress.city}
                 onChange={(e) => handleShipping(e)}
               />
               <label>Estado</label>
@@ -103,7 +103,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Estado"
                 name="state"
-                calue={shippingAddress.state}
+                value={shippingAddress.state}
                 onChange={(e) => handleShipping(e)}
               />
 
@@ -112,7 +112,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Codigo postal"
                 name="postal_code"
-                calue={shippingAddress.postal_code}
+                value={shippingAddress.postal_code}
                 onChange={(e) => handleShipping(e)}
               />
 
@@ -135,7 +135,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Telefono"
                 name="phone"
-                calue={shippingAddress.phone}
+                value={shippingAddress.phone}
                 onChange={(e) => handleShipping(e)}
               />
             </Card>
@@ -147,7 +147,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Nombre"
                 name="name"
-                calue={billingAddress.name}
+                value={billingAddress.name}
                 onChange={(e) => handleBilling(e)}
                 required
               />
@@ -157,7 +157,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Dirección 1"
                 name="line1"
-                calue={billingAddress.line1}
+                value={billingAddress.line1}
                 onChange={(e) => handleBilling(e)}
                 required
               />
@@ -167,7 +167,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Dirección 2"
                 name="line2"
-                calue={billingAddress.line2}
+                value={billingAddress.line2}
                 onChange={(e) => handleBilling(e)}
               />
 
@@ -176,7 +176,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Ciudad"
                 name="city"
-                calue={billingAddress.city}
+                value={billingAddress.city}
                 onChange={(e) => handleBilling(e)}
               />
               <label>Estado</label>
@@ -184,7 +184,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Estado"
                 name="state"
-                calue={billingAddress.state}
+                value={billingAddress.state}
                 onChange={(e) => handleBilling(e)}
               />
 
@@ -193,7 +193,7 @@ const CheckoutDetails = () => {
                 type="text"
                 placeholder="Codigo postal"
                 name="postal_code"
-                calue={billingAddress.postal_code}
+                value={billingAddress.postal_code}
                 onChange={(e) => handleBilling(e)}
               />
 
