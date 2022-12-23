@@ -336,7 +336,7 @@ const CheckoutForm = () => {
         body: JSON.stringify({}),
       };
       fetch(
-        `http://www.itbank.somee.com/api/Usuarios/Transferencia/${tarjeta},${tMes}%2F${tYear},${token},8420678435993377,${cartTotalAmount}`,
+        `https://www.itbank.somee.com/api/Usuarios/Transferencia/${tarjeta},${tMes}%2F${tYear},${token},8420678435993377,${cartTotalAmount}`,
         requestOptions
       )
         .then((response) => response.json())
