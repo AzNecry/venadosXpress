@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/venadosXpress/static/css/main.805b3771.css",
-    "main.js": "/venadosXpress/static/js/main.5283887b.js",
+    "main.js": "/venadosXpress/static/js/main.5c350cea.js",
     "static/js/787.34bcbeb0.chunk.js": "/venadosXpress/static/js/787.34bcbeb0.chunk.js",
     "static/media/spinner.jpg": "/venadosXpress/static/media/spinner.afa973eee05e0ebff95a.jpg",
     "static/media/venadosXpress.png": "/venadosXpress/static/media/venadosXpress.c18b21840c76bd8b2282.png",
@@ -11,11 +11,11 @@
     "static/media/loader.gif": "/venadosXpress/static/media/loader.9d11df4bdd0bb34de773.gif",
     "index.html": "/venadosXpress/index.html",
     "main.805b3771.css.map": "/venadosXpress/static/css/main.805b3771.css.map",
-    "main.5283887b.js.map": "/venadosXpress/static/js/main.5283887b.js.map",
+    "main.5c350cea.js.map": "/venadosXpress/static/js/main.5c350cea.js.map",
     "787.34bcbeb0.chunk.js.map": "/venadosXpress/static/js/787.34bcbeb0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.805b3771.css",
-    "static/js/main.5283887b.js"
+    "static/js/main.5c350cea.js"
   ]
 }
