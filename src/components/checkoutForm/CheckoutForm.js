@@ -117,7 +117,7 @@ const CheckoutForm = () => {
             cantidadStock(cartItems[i].id, cant);
 
             fetch(
-              'https://lacheveriaapi-production.up.railway.app/ventas',
+              'https://lacheveriabackend-production.up.railway.app/ventas',
               alcoholOptions
             )
               .then((response) => response.json())
