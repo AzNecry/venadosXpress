@@ -41,7 +41,8 @@ const CheckoutForm = () => {
   const cartTotalAmount = useSelector(selectCartTotalAmount);
   const shippingAddress = useSelector(selectShippingAddress);
 
-  var stockActual = 0;
+  var cant;
+  var stockActual;
 
   const cantidadStock = (idStock, stock) => {
     const cantStock = {
@@ -112,7 +113,7 @@ const CheckoutForm = () => {
                 PrecioProd: cartItems[i].price,
               }),
             };
-            var cant = cartItems[i].brand - cartItems[i].cartQuantity;
+            cant = cartItems[i].brand - cartItems[i].cartQuantity;
             cantidadStock(cartItems[i].id, cant);
 
             fetch(
@@ -148,9 +149,9 @@ const CheckoutForm = () => {
               body: JSON.stringify({
                 id_ord: numeroOrdern,
                 MontoTotal: cartItems[i].price * cartItems[i].cartQuantity,
-                NoArt: cartItems[i].id,
+                no_art: cartItems[i].id,
                 CantidadProd: cartItems[i].cartQuantity,
-                NoProd: cartItems[i].id,
+                id_producto: cartItems[i].id,
                 NomProd: cartItems[i].name,
                 DescProd: cartItems[i].desc,
                 NoSerieProd: cartItems[i].id,
@@ -160,7 +161,7 @@ const CheckoutForm = () => {
             cant = cartItems[i].brand - cartItems[i].cartQuantity;
             cantidadStock(cartItems[i].id, cant);
             fetch(
-              'https://lacheveriaapi-production.up.railway.app/ventas',
+              'http://apis-production-84ff.up.railway.app/Venta/Ver',
               revistaOptions
             )
               .then((response) => response.json())
